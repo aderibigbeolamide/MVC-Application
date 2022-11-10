@@ -1,0 +1,44 @@
+@* @{
+    Layout = "~/Views/Shared/_AdminDashboard.cshtml";
+} *@
+@using MVCVottingApp.Data.ViewModel.RequestModel
+@model UpdateElectoralOfficerRequestModel
+<div>
+    <form asp-action="EditProfile" asp-controller ="Admin">
+        <div>
+            <label>FullName</label>
+            <input for="FullName" type="text" id ="FullName" name="FullName" value="@Model.FullName" required/>
+        </div>
+        <div>
+            <label>Email</label>
+            <input for="Email" type="email"  name="email" id="email" value="@Model.Email" required/>
+        </div>
+        <div>
+            <label>Password</label>
+            <input for="Password" type="password" name="Password" id="password" value="@Model.Password" required/>
+        </div>
+        <div>
+            <label>PhoneNumber</label>
+            <input for="PhoneNumber" type="tel" name="PhoneNumber" id="phoneNumber" value="@Model.PhoneNumber" required/>
+        </div>
+        <div>
+            <label>Address</label>
+            <input for="Address" type="tel" name="@Model.Address" id="address" value="@Model.Address" required/>
+        </div>
+        <div>
+            <label>NextOfKin</label>
+            <input for="NextOfKin" type="tel" name="NextOfKin" id="nextofKin" value="@Model.NextOfKin" required/>
+        </div>
+        <div>
+            <button type="submit" value="Submit" required>Submit</button>
+        </div>
+    </form>
+</div>
+ @if (ViewBag.Message != null)  
+    {  
+        <script type="text/javascript">  
+            window.onload = function () {  
+                alert("@ViewBag.Message");  
+            };  
+        </script>  
+    }  

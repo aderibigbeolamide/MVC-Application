@@ -1,0 +1,27 @@
+@using MVCVottingApp.Data.ViewModel.ResponseModel
+@model ElectoralOfficerResponseModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+  <link rel="stylesheet" href="~/Styles/AdminLogin.css">
+
+<div class="login-form">
+  <form asp-action="AdminLogin" asp-controller="Login">
+    <h1>Login</h1>
+    <div class="content">
+      <div class="input-field">
+        <input for="Email" name="Email" type="email" placeholder="Email" autocomplete="nope">
+      </div>
+      <div class="input-field">
+        <input for="Password" name="Password" type="password" placeholder="Password" autocomplete="new-password">
+      </div>
+      <a href="#" class="link">Forgot Your Password?</a>
+    </div>
+    <div class="action">
+      <button>Register</button>
+      <button onclick=Signin()>Sign in</button>
+    </div>
+  </form>
+</div>
+  @* <script  src="~/Scripts/AdminLogin.js"></script> *@

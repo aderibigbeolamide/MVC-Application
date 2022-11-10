@@ -1,0 +1,128 @@
+@{
+    Layout = "~/Views/Shared/_AdminDashboard.cshtml";
+}
+@using MVCVottingApp.Data.ViewModel.RequestModel
+@model UpdateElectoralOfficerRequestModel
+
+    <title>Admin Dashboard</title>
+    <script src="https://kit.fontawesome.com/f33684e5cd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/Styles/common.css">
+    <link rel="stylesheet" href="~/Styles/Admindashboard.css">
+
+
+<body>
+    <input type="checkbox" id="nav-toggle">
+    <div class="sidebar">
+        <div class="sidebarbrand sidebar-brand">
+            <h2><span class="fa fa-accusoft"><span>Admin</span> </span></h2>
+
+            <div class="sidebar-menu">
+                <ul id="sidebarmenu">
+                    <li>
+                        <a href="#" ><span class="fa fa-igloo"></span></span>
+                            <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href="/AdminContestant.html" ><span class="fa fa-users"></span></span>
+                            <span>Contestant</span></a>
+                    </li>
+                    <li>
+                        <a href="/AdminVoter.html" ><span class="fa fa-clipboard-list"></span></span>
+                            <span>Voters</span></a>
+                    </li>
+                    <li>
+                        <a href="#" ><span class="fa fa-shopping-bag"></span></>
+                            <span>Admin</span></a>
+                    </li>
+                    <li>
+                        <a href="/Election.html" ><span class="fa fa-receipt"></span></span>
+                            <span>Election</span></a>
+                    </li>
+                    <li>
+                        <a asp-action ="EditProfile" asp-controller="Admin"><span class="fa fa-clipboard-list"></span></span>
+                            <span>Edit Profile</span></a>
+                    </li>
+                    <li>
+                        <a href="/AdminAccount.html" ><span class="fa fa-clipboard-list"></span></span>
+                            <span>Add New Admin</span></a>
+                    </li>
+                    <li>
+                        <a href="/index.html" ><span class="fa fa-power-off"></span></span>
+                            <span>LogOut</span></a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>
+                <label for="nav-toggle">
+                    <span class="fa-solid fa-bars"></span>
+                </label>
+                Dashboard
+            </h2>
+            <div class="search-wrapper">
+                <span class="fa fa-search"></span>
+                <input type="search" placeholder="search here" />
+            </div>
+            <div class="user-wrapper">
+                <img src="Images/votelogo.jpg" width="40px" height="40px" alt="">
+                <h4>Admin</h4>
+                <small>Super Admin</small>
+            </div>
+        </header>
+
+        <main>
+            <div class="cards">
+                <div class="card-single">
+                    <div>
+                        <h1>Admin</h1>
+                        <!-- <span>Admin</span> -->
+                    </div>
+
+                    <div>
+                        <span class="fa fa-users"></span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>Description</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, nam!</p>
+                    </div>
+
+                    <div>
+                        <span class="fa fa-audio-description"></span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>Position</h1>
+                    </div>
+
+                    <div>
+                        <span class="fa fa-tags"></span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>Active</h1>
+                    </div>
+
+                    <div>
+                        <span class="fa fa-thumbs-up"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    @* <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div> *@
+    <script src="Scripts/Admindashboard.js"></script>
+</body>
+
+</html>

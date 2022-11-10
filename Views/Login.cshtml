@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+  <link rel="stylesheet" href="~/Styles/Studentform.css">
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true">
+
+      <div class="signup">
+        <form id="form" method="get">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" name="txt" id="fullName" placeholder="FullName" >
+          <select class="gender">
+            <option value="" disabled selected>Gender</option>
+            <option value="Male">Male</option>
+            <option value="FeMale">Female</option>
+          </select>
+          <input type="text" name="txt" id="matricNo" placeholder="matricNo" >
+          <select id="level">
+            <option value="" disabled selected>Level</option>
+            <option value="100">100</option>
+            <option value="200">200</option>
+            <option value="300">300</option>
+            <option value="400">400</option>
+            <option value="500">500</option>
+          </select>
+          <input type="text" name="txt" id="GP" placeholder="G.P" >
+          <input type="text" name="txt" id="department" placeholder="department" >
+          <input type="email" name="email" id="email" placeholder="Email" >
+          <input type="password" name="pswd" id="password" placeholder="Password" >
+          <input type="tel" name="txt" id="phoneNumber" placeholder="PhoneNumber" >
+          <input type="tel" name="txt" id="address" placeholder="Address" >
+          <button onclick="Signup()">Sign up</button>
+        </form>
+      </div>
+
+      <div class="login">
+        <form class="login" method="get" onsubmit="login()">
+          <label for="chk" aria-hidden="true">Login</label>
+          <input type="text" name="matricNo" id="matricNol" placeholder="matricNo" required="">
+          <input type="password" name="pswd" id="passwordl" placeholder="Password" required="">
+          <button>Login</button>
+        </form>
+      </div>
+    </div>
+  <script src="~/Scripts/StudentForm.js"></script>

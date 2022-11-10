@@ -1,0 +1,53 @@
+@using MVCVottingApp.Data.ViewModel.RequestModel
+@model CreateElectoralOfficerRequestModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/Styles/Studentform.css">
+<div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true">
+
+      <div class="signup">
+        <form id="form" asp-action="AdminSignUp" asp-controller="Admin">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input for="FullName" type="text" name="FullName" id="fullName" placeholder="FullName" >
+          <select for="Gender" class="gender" name="Gender">
+            <option value="" disabled selected>Gender</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+            <option value="3">RatherNotSay</option>
+          </select>
+          <input for="Email" type="email"  name="email" id="email" placeholder="Email" >
+          <input for="Password" type="password" name="Password" id="password" placeholder="Password" >
+          <input for="PhoneNumber" type="tel" name="PhoneNumber" id="phoneNumber" placeholder="PhoneNumber"  >
+          <input for="Address" type="tel" name="Address" id="address" placeholder="Address" >
+          <input for="NextOfKin" type="tel" name="NextOfKin" id="nextofKin" placeholder="NextOfKin" >
+          <select for="RoleId" id="Role" name="RoleId">
+            <option value="" disabled selected>Role</option>
+            <option value="1">Admin</option>
+            <option value="2">ElectoralOfficer1</option>
+            <option value="3">ElectoralOfficer2</option>
+          </select>
+          <button onclick="Signup()">Sign up</button>
+        </form>
+      </div>
+      @if (ViewBag.Message != null)  
+    {  
+        <script type="text/javascript">  
+            window.onload = function () {  
+                alert("@ViewBag.Message");  
+            };  
+        </script>  
+    }  
+
+      <div class="login">
+        <form class="login" method="get" onsubmit="login()">
+          <label for="chk" aria-hidden="true">Login</label>
+          <input type="email" name="email" id="emaill" placeholder="Email" required="">
+          <input type="password" name="pswd" id="passwordl" placeholder="Password" required="">
+          <button >Login</button>
+        </form>
+      </div>
+    </div>
+  @* <script src="~/Scripts/AdminForm.js"></script> *@
